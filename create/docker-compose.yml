@@ -1,0 +1,7 @@
+version: "3"
+services:
+  nginx:
+    image: muthuinc/react2:${GIT_COMMIT}
+    container_name: muthu
+    ports:
+      - "80:80"
