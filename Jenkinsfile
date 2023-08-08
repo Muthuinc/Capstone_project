@@ -24,6 +24,7 @@ pipeline {
         }
 
         stage ('create infra') {
+            when { changeset "main.tf" } // this stage will only run if there is any change in the infra configuration
             steps{ 
                script {
                     withCredentials([sshUserPrivateKey(credentialsId: 'Avamumbai', keyFileVariable: 'SSH_KEY', usernameVariable: 'ubuntu')]) {
