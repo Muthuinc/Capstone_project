@@ -1,0 +1,9 @@
+Jenkinsfile merge=ours
+build.sh merge=ours
+create/create.sh merge=ours
+create/docker-compose.yml merge=ours
+create/main.tf merge=ours
+push/push.sh merge=ours
+deploy/deploy.sh merge=ours
+monitor/monitor.sh merge=ours
+monitor/docker-compose1.yml merge=ours
