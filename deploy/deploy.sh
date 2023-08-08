@@ -6,7 +6,7 @@ ssh -o StrictHostKeyChecking=no -i "$SSH_KEY" "$ubuntu"@$a <<EOF
 
 sudo docker rm -f $(sudo docker ps -q --filter name=muthu) 
 
-sudo docker rmi $(sudo docker images -q --filter reference=muthuinc/react2)
+sudo docker rmi $(sudo docker images -q --filter reference=muthuinc/reactdev2)
 
 sudo GIT_COMMIT=$GIT_COMMIT docker-compose up -d
 
