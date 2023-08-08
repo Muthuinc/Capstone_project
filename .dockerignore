@@ -1,0 +1,12 @@
+docker-compose.yml
+Jenkinsfile
+.git
+build.sh
+create/*
+deploy/*
+push/*
+monitor/*
+docker-compose1.yml
+.gitattributes
+
+# the above files has no use to be considered for building the docker image.
