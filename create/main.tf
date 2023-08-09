@@ -7,17 +7,16 @@ terraform {
   }
 }
 
-# if you did aws configure
-# it will take credentials from .aws/config file
+# 
+# it will take credentials from Jenkins
 
 provider "aws" {
   region = "ap-south-1"
 }
 
 
-# we need to create the instance in the default vpc and subnet. 
-# so we don't have to specify any vpc or subnet. 
-# terraform will automatically create the instance in the default unless specified
+
+# terraform will  create the security group for the prod server
 
 resource "aws_security_group" "prod" {
   name        = "prod"
@@ -51,6 +50,8 @@ resource "aws_security_group" "prod" {
     Name = "Prod_security"
   }
 }
+
+#Ec2 instance with the below config will be created.
 
 resource "aws_instance" "instance1" {
   ami                     = "ami-08e5424edfe926b43"
